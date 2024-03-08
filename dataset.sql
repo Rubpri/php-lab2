@@ -16,7 +16,7 @@ CREATE TABLE usuarios (
 DROP TABLE IF EXISTS tareas;
 CREATE TABLE tareas (
   id INT PRIMARY KEY AUTO_INCREMENT,
-  usuario_id INT NOT NULL,
+  usuario_id INT,
   descripcion TEXT NOT NULL,
   active BOOLEAN DEFAULT FALSE,
   FOREIGN KEY (usuario_id) REFERENCES usuarios(id)

@@ -9,7 +9,9 @@ class MySQLUsuarios {
     }
 
     public function getUsuarios() {
-
+        $sql = "SELECT * FROM usuarios";
+        $stmt = $this->db->getConexion()->query($sql);
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
     public function postUsuario($nombre) {
